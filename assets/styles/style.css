@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Lora', sans-serif;
+  
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+    background-color: #FEECE2;
+}
+
+header.navbar-container {
+    width: 100%;
+   
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    background-color: #E2BFB3;
+    position: sticky;
+    height: 40rem;
+    top: 0;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    border: 3px solid #FEECE2;
+    background-color: transparent;
+    color: black;
+}
+
+header.navbar-container .identitas {
+    color: white;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+main #content {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+main #content .card .content-description {
+    flex: 1 1;
+}
+
+main #content .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    
+    margin-right : 20px;
+    margin-bottom: 20px;
+}
+
+main #content .content-description .title {
+    margin-block: 1rem;
+    font-size: 3.5rem;
+}
+
+main #content .content-description p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    text-align: justify;
+}
+
+main #content .content-image {
+    flex: 1;
+    display: flex;
+}
+
+main #content .content-image img {
+    width: 300px;
+    min-width: 199px;
+    max-width: 250px;
+    margin: auto;
+    border-radius: 10px;
+    height: auto;
+}
+
+#content {
+    flex: 5;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+    align-items: stretch;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+}
+
+td {
+    text-align: justify;
+}
+
+aside .profile {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    gap: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.profile img {
+    width: 190px;
+}
+
+.profile figure {
+    text-align: center;
+    font-weight: bold;
+}
+
+main aside section a {
+    font-size: 1.5rem;
+    color: #E2BFB3;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+main aside section a:hover {
+    color: #FFBE98;
+}
+
+aside {
+    flex: 1;
+}
+
+footer {
+    padding: 10px;
+    color: white;
+    background-color: #E2BFB3;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+    main aside {
+        align-self: stretch;
+    }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+    }
+
+    main {
+        flex-flow: column nowrap;
+        padding: 1rem 3rem;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+
+    main #content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main #content .card {
+        flex-direction: column;
+    }
+
+    main #content .card .content-description {
+        order: -1 ;
+    }
+
+    main #content .content-description .title {
+        font-size: 3rem;
+    }
+    
+    main #content .content-description p {
+        font-size: 1rem;
+    }
+
+    
+}
+
+
